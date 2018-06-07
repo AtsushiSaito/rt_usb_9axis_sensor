@@ -111,9 +111,9 @@ int main(int argc, char **argv){
                     mag_msg.header.stamp = ros_time;
                     temp_msg.header.stamp = ros_time;
 
-                    imu_msg.angular_velocity.x = stof(imu_data[1]) * (M_PI/180.0);
-                    imu_msg.angular_velocity.y = stof(imu_data[2]) * (M_PI/180.0);
-                    imu_msg.angular_velocity.z = stof(imu_data[3]) * (M_PI/180.0);
+                    imu_msg.angular_velocity.x = stof(imu_data[1]);
+                    imu_msg.angular_velocity.y = stof(imu_data[2]);
+                    imu_msg.angular_velocity.z = stof(imu_data[3]);
 
                     imu_msg.linear_acceleration.x = stof(imu_data[4]) * 9.81;
                     imu_msg.linear_acceleration.y = stof(imu_data[5]) * 9.81;
