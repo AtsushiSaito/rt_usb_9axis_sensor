@@ -1,5 +1,6 @@
 <launch>
+  <arg name="port" default="/dev/ttyACM0" />
   <node pkg="rt_usb_9axis_sensor" name="rt_usb_9axis_sensor" type="rt_usb_9axis_sensor" required="true" output="screen">
-    <param name="port" value="/dev/ttyACM0"/>
+    <param name="port" value="$(arg port)" />
   </node>
 </launch>
